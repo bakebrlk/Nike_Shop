@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */; };
+		8B3F7A342A30C59F00890968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A332A30C59F00890968 /* ViewController.swift */; };
+		8B3F7A392A30C5A000890968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F7A382A30C5A000890968 /* Assets.xcassets */; };
+		8B3F7A3C2A30C5A000890968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */; };
+		8B3F7A442A30C68400890968 /* OnBordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A432A30C68400890968 /* OnBordingView.swift */; };
+		8B3F7A462A30C6AA00890968 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A452A30C6AA00890968 /* WelcomeView.swift */; };
+		8B3F7A482A30C71300890968 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A472A30C71300890968 /* RegistrationView.swift */; };
+		8B3F7A4A2A30C73E00890968 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A492A30C73E00890968 /* AuthorizationView.swift */; };
+		8B3F7A4C2A30C76800890968 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A4B2A30C76800890968 /* CatalogView.swift */; };
+		8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A4D2A30C77F00890968 /* CartView.swift */; };
+		8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A502A30C7B700890968 /* ProfileView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B3F7A2C2A30C59F00890968 /* Nike Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B3F7A332A30C59F00890968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B3F7A382A30C5A000890968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B3F7A3B2A30C5A000890968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B3F7A3D2A30C5A000890968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3F7A432A30C68400890968 /* OnBordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingView.swift; sourceTree = "<group>"; };
+		8B3F7A452A30C6AA00890968 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8B3F7A472A30C71300890968 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		8B3F7A492A30C73E00890968 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		8B3F7A4B2A30C76800890968 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		8B3F7A4D2A30C77F00890968 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		8B3F7A502A30C7B700890968 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B3F7A292A30C59F00890968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B3F7A232A30C59F00890968 = {
+			isa = PBXGroup;
+			children = (
+				8B3F7A2E2A30C59F00890968 /* Nike Shop */,
+				8B3F7A2D2A30C59F00890968 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B3F7A2D2A30C59F00890968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B3F7A2C2A30C59F00890968 /* Nike Shop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B3F7A2E2A30C59F00890968 /* Nike Shop */ = {
+			isa = PBXGroup;
+			children = (
+				8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */,
+				8B3F7A332A30C59F00890968 /* ViewController.swift */,
+				8B3F7A382A30C5A000890968 /* Assets.xcassets */,
+				8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */,
+				8B3F7A3D2A30C5A000890968 /* Info.plist */,
+				8B3F7A432A30C68400890968 /* OnBordingView.swift */,
+				8B3F7A452A30C6AA00890968 /* WelcomeView.swift */,
+				8B3F7A472A30C71300890968 /* RegistrationView.swift */,
+				8B3F7A492A30C73E00890968 /* AuthorizationView.swift */,
+				8B3F7A4B2A30C76800890968 /* CatalogView.swift */,
+				8B3F7A4D2A30C77F00890968 /* CartView.swift */,
+				8B3F7A502A30C7B700890968 /* ProfileView.swift */,
+			);
+			path = "Nike Shop";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B3F7A2B2A30C59F00890968 /* Nike Shop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B3F7A402A30C5A000890968 /* Build configuration list for PBXNativeTarget "Nike Shop" */;
+			buildPhases = (
+				8B3F7A282A30C59F00890968 /* Sources */,
+				8B3F7A292A30C59F00890968 /* Frameworks */,
+				8B3F7A2A2A30C59F00890968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nike Shop";
+			productName = "Nike Shop";
+			productReference = 8B3F7A2C2A30C59F00890968 /* Nike Shop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B3F7A242A30C59F00890968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8B3F7A2B2A30C59F00890968 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8B3F7A272A30C59F00890968 /* Build configuration list for PBXProject "Nike Shop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B3F7A232A30C59F00890968;
+			productRefGroup = 8B3F7A2D2A30C59F00890968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B3F7A2B2A30C59F00890968 /* Nike Shop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B3F7A2A2A30C59F00890968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3F7A3C2A30C5A000890968 /* LaunchScreen.storyboard in Resources */,
+				8B3F7A392A30C5A000890968 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B3F7A282A30C59F00890968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3F7A442A30C68400890968 /* OnBordingView.swift in Sources */,
+				8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */,
+				8B3F7A4C2A30C76800890968 /* CatalogView.swift in Sources */,
+				8B3F7A342A30C59F00890968 /* ViewController.swift in Sources */,
+				8B3F7A4A2A30C73E00890968 /* AuthorizationView.swift in Sources */,
+				8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */,
+				8B3F7A462A30C6AA00890968 /* WelcomeView.swift in Sources */,
+				8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */,
+				8B3F7A482A30C71300890968 /* RegistrationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B3F7A3B2A30C5A000890968 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B3F7A3E2A30C5A000890968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B3F7A3F2A30C5A000890968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B3F7A412A30C5A000890968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5PQY3V94J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nike Shop/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SDU.Nike-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B3F7A422A30C5A000890968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5PQY3V94J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nike Shop/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SDU.Nike-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B3F7A272A30C59F00890968 /* Build configuration list for PBXProject "Nike Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3F7A3E2A30C5A000890968 /* Debug */,
+				8B3F7A3F2A30C5A000890968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B3F7A402A30C5A000890968 /* Build configuration list for PBXNativeTarget "Nike Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3F7A412A30C5A000890968 /* Debug */,
+				8B3F7A422A30C5A000890968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B3F7A242A30C59F00890968 /* Project object */;
+}
