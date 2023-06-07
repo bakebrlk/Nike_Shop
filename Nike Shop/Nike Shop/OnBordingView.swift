@@ -11,6 +11,8 @@ import SnapKit
 
 class OnBordingView: UIViewController{
     
+    static var backgColor = UIColor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -18,6 +20,9 @@ class OnBordingView: UIViewController{
     
     private func setUI(){
         view.backgroundColor = UIColor(named: "white")
+        
+        setViews(view: view, ofView: thirdView)
+        
         let btm = BottomSheet
         view.addSubview(btm)
         let h: Double = Double(view.bounds.height)
@@ -25,25 +30,78 @@ class OnBordingView: UIViewController{
         btm.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Int(h * 0.35))
+            make.height.equalTo(Int(h * 0.37))
             make.bottom.equalToSuperview()
         }
     }
 }
 
-private let FirstView: UIView = {
+private func views(i1: String, i2: String, i3: String) -> UIView{
     let view = UIView()
     
+    let img1 = UIImageView(image: UIImage(named: i1))
+    let img2 = UIImageView(image: UIImage(named: i3))
+    let img3 = UIImageView(image: UIImage(named: i2))
+    
+   
+    view.addSubview(img3)
+    view.addSubview(img1)
+    view.addSubview(img2)
+    
+    img1.snp.makeConstraints { make in
+        make.bottom.equalToSuperview().offset(-16)
+    }
+
+    img2.snp.makeConstraints { make in
+        make.trailing.equalToSuperview()
+        make.top.equalToSuperview().offset(59)
+    }
+
     return view
+}
+private func setViews(view: UIView, ofView: UIView){
+    view.addSubview(ofView)
+    
+    ofView.snp.makeConstraints { make in
+        make.center.equalToSuperview()
+        make.leading.equalToSuperview()
+        make.trailing.equalToSuperview()
+        make.top.equalToSuperview()
+        make.bottom.equalToSuperview()
+    }
+}
+
+private let firstView : UIView = {
+    OnBordingView.backgColor = UIColor(red: 0.596, green: 0.612, blue: 0.580, alpha: 0.98)
+    return views(i1: "v1", i2: "10", i3: "9")
 }()
+
+private let secondView : UIView = {
+    OnBordingView.backgColor = UIColor(red: 0.659, green: 0.612, blue: 0.675, alpha: 0.98)
+    return views(i1: "v2", i2: "12", i3: "11")
+}()
+
+private let thirdView : UIView = {
+    OnBordingView.backgColor = UIColor(red: 0.658, green: 0.580, blue: 0.580, alpha: 0.98)
+    return views(i1: "v3", i2: "14", i3: "13")
+}()
+
+private func backgroundColor(fColor: CAGradientLayer, sColor: UIColor , view: UIView)-> CAGradientLayer{
+    let color = CAGradientLayer()
+    color.frame = view.bounds
+    color.colors = [fColor, sColor]
+    return color
+}
 
 private let BottomSheet: UIView = {
     let sheet = UIView()
     sheet.layer.cornerRadius = 12
-    sheet.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
-    
+    sheet.backgroundColor = OnBordingView.backgColor
+  
+   
     let mainLabel = UILabel()
     mainLabel.text = "Fast shipping"
+    mainLabel.textColor = .white
     mainLabel.font = .boldSystemFont(ofSize: 28)
     
     sheet.addSubview(mainLabel)
@@ -54,6 +112,7 @@ private let BottomSheet: UIView = {
     
     let text = UILabel()
     text.text = "Get all of your desired sneakers in one place."
+    text.textColor = .white
     
     sheet.addSubview(text)
     text.snp.makeConstraints { make in
@@ -65,6 +124,7 @@ private let BottomSheet: UIView = {
     let btn =  btn(text: "next")
     sheet.addSubview(btn)
     setBtn(btn: btn, view: sheet)
+    
     
     return sheet
 }()
