@@ -18,6 +18,8 @@
 		8B3F7A4C2A30C76800890968 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A4B2A30C76800890968 /* CatalogView.swift */; };
 		8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A4D2A30C77F00890968 /* CartView.swift */; };
 		8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A502A30C7B700890968 /* ProfileView.swift */; };
+		8B3F7A542A30CB8F00890968 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B3F7A532A30CB8F00890968 /* SnapKit */; };
+		8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A552A30CC2400890968 /* MyCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,7 @@
 		8B3F7A4B2A30C76800890968 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		8B3F7A4D2A30C77F00890968 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8B3F7A502A30C7B700890968 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8B3F7A552A30CC2400890968 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3F7A542A30CB8F00890968 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +72,6 @@
 			children = (
 				8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */,
 				8B3F7A332A30C59F00890968 /* ViewController.swift */,
-				8B3F7A382A30C5A000890968 /* Assets.xcassets */,
-				8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */,
-				8B3F7A3D2A30C5A000890968 /* Info.plist */,
 				8B3F7A432A30C68400890968 /* OnBordingView.swift */,
 				8B3F7A452A30C6AA00890968 /* WelcomeView.swift */,
 				8B3F7A472A30C71300890968 /* RegistrationView.swift */,
@@ -78,6 +79,10 @@
 				8B3F7A4B2A30C76800890968 /* CatalogView.swift */,
 				8B3F7A4D2A30C77F00890968 /* CartView.swift */,
 				8B3F7A502A30C7B700890968 /* ProfileView.swift */,
+				8B3F7A552A30CC2400890968 /* MyCustomView.swift */,
+				8B3F7A382A30C5A000890968 /* Assets.xcassets */,
+				8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */,
+				8B3F7A3D2A30C5A000890968 /* Info.plist */,
 			);
 			path = "Nike Shop";
 			sourceTree = "<group>";
@@ -98,6 +103,9 @@
 			dependencies = (
 			);
 			name = "Nike Shop";
+			packageProductDependencies = (
+				8B3F7A532A30CB8F00890968 /* SnapKit */,
+			);
 			productName = "Nike Shop";
 			productReference = 8B3F7A2C2A30C59F00890968 /* Nike Shop.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 8B3F7A232A30C59F00890968;
+			packageReferences = (
+				8B3F7A522A30CB8F00890968 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8B3F7A2D2A30C59F00890968 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +170,7 @@
 				8B3F7A4A2A30C73E00890968 /* AuthorizationView.swift in Sources */,
 				8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */,
 				8B3F7A462A30C6AA00890968 /* WelcomeView.swift in Sources */,
+				8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */,
 				8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */,
 				8B3F7A482A30C71300890968 /* RegistrationView.swift in Sources */,
 			);
@@ -370,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B3F7A522A30CB8F00890968 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B3F7A532A30CB8F00890968 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B3F7A522A30CB8F00890968 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B3F7A242A30C59F00890968 /* Project object */;
 }

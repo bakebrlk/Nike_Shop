@@ -5,4 +5,9 @@
 //  Created by bakebrlk on 07.06.2023.
 //
 
-import Foundation
+import UIKit
+import SnapKit
+
+class AuthorizationView: UIViewController{
+    
+}
