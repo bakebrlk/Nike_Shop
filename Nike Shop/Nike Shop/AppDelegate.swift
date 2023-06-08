@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: OnBordingView())
+        window?.rootViewController = UINavigationController(rootViewController: RegistrationView())
         
         return true
     }
