@@ -4,14 +4,18 @@
 //
 //  Created by bakebrlk on 07.06.2023.
 //
-
 import UIKit
 import SnapKit
 
 
 class OnBordingView: UIViewController{
     
+    var pages = [UIView]()
+    private var i = -1
     static var backgColor = UIColor()
+    let FV = firstView
+    let SV = secondView
+    let TV = thirdView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +25,20 @@ class OnBordingView: UIViewController{
     private func setUI(){
         view.backgroundColor = UIColor(named: "white")
         
-        setViews(view: view, ofView: thirdView)
         
+        setViews(view: view, ofView: TV)
+        setViews(view: view, ofView: SV)
+        setViews(view: view, ofView: FV)
+
+        pages.append(FV)
+        pages.append(SV)
+        pages.append(TV)
+        
+        FV.isHidden = true
+        SV.isHidden = true
+        TV.isHidden = true
+        
+        Hid()
         let btm = BottomSheet
         view.addSubview(btm)
         let h: Double = Double(view.bounds.height)
@@ -33,8 +49,75 @@ class OnBordingView: UIViewController{
             make.height.equalTo(Int(h * 0.37))
             make.bottom.equalToSuperview()
         }
+        
+        let btn =  btn(text: "Next")
+        view.addSubview(btn)
+        setBtn(btn: btn, view: view)
+        btn.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+        
+    
+    }
+    
+    
+    private let BottomSheet: UIView = {
+        let sheet = UIView()
+        sheet.layer.cornerRadius = 12
+        sheet.backgroundColor = OnBordingView.backgColor
+      
+       
+        let mainLabel = UILabel()
+        mainLabel.text = "Fast shipping"
+        mainLabel.textColor = .white
+        mainLabel.font = .boldSystemFont(ofSize: 28)
+        
+        sheet.addSubview(mainLabel)
+        mainLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(80)
+        }
+        
+        let text = UILabel()
+        text.text = "Get all of your desired sneakers in one place."
+        text.textColor = .white
+        
+        sheet.addSubview(text)
+        text.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.top.equalTo(mainLabel.snp.bottom).offset(16)
+        }
+        
+        return sheet
+    }()
+    
+    @objc private func nextAction(){
+       Hid()
+    }
+    
+    private func Hid(){
+        
+        if(i == -1){
+            FV.isHidden = false
+        }
+        if(i == 0){
+            FV.isHidden = true
+            SV.isHidden = false
+        }
+        if(i == 1){
+            SV.isHidden = true
+            TV.isHidden = false
+        }
+        
+        if(i == 2){
+            TV.isHidden = true
+            FV.isHidden = false
+            i = -1
+        }
+        
+        i += 1
     }
 }
+
 
 private func views(i1: String, i2: String, i3: String) -> UIView{
     let view = UIView()
@@ -86,45 +169,3 @@ private let thirdView : UIView = {
     return views(i1: "v3", i2: "14", i3: "13")
 }()
 
-private func backgroundColor(fColor: CAGradientLayer, sColor: UIColor , view: UIView)-> CAGradientLayer{
-    let color = CAGradientLayer()
-    color.frame = view.bounds
-    color.colors = [fColor, sColor]
-    return color
-}
-
-private let BottomSheet: UIView = {
-    let sheet = UIView()
-    sheet.layer.cornerRadius = 12
-    sheet.backgroundColor = OnBordingView.backgColor
-  
-   
-    let mainLabel = UILabel()
-    mainLabel.text = "Fast shipping"
-    mainLabel.textColor = .white
-    mainLabel.font = .boldSystemFont(ofSize: 28)
-    
-    sheet.addSubview(mainLabel)
-    mainLabel.snp.makeConstraints { make in
-        make.centerX.equalToSuperview()
-        make.top.equalToSuperview().offset(80)
-    }
-    
-    let text = UILabel()
-    text.text = "Get all of your desired sneakers in one place."
-    text.textColor = .white
-    
-    sheet.addSubview(text)
-    text.snp.makeConstraints { make in
-        make.leading.equalToSuperview().offset(16)
-        make.trailing.equalToSuperview().offset(-16)
-        make.top.equalTo(mainLabel.snp.bottom).offset(16)
-    }
-    
-    let btn =  btn(text: "next")
-    sheet.addSubview(btn)
-    setBtn(btn: btn, view: sheet)
-    
-    
-    return sheet
-}()

@@ -13,7 +13,6 @@ func btn(text: String) -> UIButton{
     btn.setTitle(text, for: .normal)
     btn.backgroundColor = UIColor(named: "black")
     btn.setTitleColor(.white, for: .normal)
-    
     return btn
 }
 
