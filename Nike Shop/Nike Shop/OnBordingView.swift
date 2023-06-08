@@ -10,12 +10,15 @@ import SnapKit
 
 class OnBordingView: UIViewController{
     
-    var pages = [UIView]()
     private var i = -1
     static var backgColor = UIColor()
     let FV = firstView
     let SV = secondView
     let TV = thirdView
+    
+    var c1 = circle()
+    var c2 = circle()
+    var c3 = circle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +32,6 @@ class OnBordingView: UIViewController{
         setViews(view: view, ofView: TV)
         setViews(view: view, ofView: SV)
         setViews(view: view, ofView: FV)
-
-        pages.append(FV)
-        pages.append(SV)
-        pages.append(TV)
         
         FV.isHidden = true
         SV.isHidden = true
@@ -46,16 +45,42 @@ class OnBordingView: UIViewController{
         btm.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Int(h * 0.37))
+            make.top.equalTo(Int(h * 0.63))
             make.bottom.equalToSuperview()
         }
+        
         
         let btn =  btn(text: "Next")
         view.addSubview(btn)
         setBtn(btn: btn, view: view)
         btn.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+
         
-    
+        view.addSubview(c2)
+        c2.snp.makeConstraints { make in
+            make.top.equalTo(btm.snp.top).offset(32)
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(btm.snp.top).offset(40)
+            make.width.height.equalTo(8)
+        }
+        
+        view.addSubview(c1)
+        
+        c1.snp.makeConstraints { make in
+            make.top.equalTo(btm.snp.top).offset(32)
+            make.bottom.equalTo(btm.snp.top).offset(40)
+            make.centerX.equalTo(c2.snp.centerX).offset(-24)
+            make.width.height.equalTo(8)
+        }
+
+        view.addSubview(c3)
+        
+        c3.snp.makeConstraints { make in
+            make.width.height.equalTo(8)
+            make.top.equalTo(btm.snp.top).offset(32)
+            make.bottom.equalTo(btm.snp.top).offset(40)
+            make.centerX.equalTo(c2.snp.centerX).offset(24)
+        }
     }
     
     
@@ -98,26 +123,45 @@ class OnBordingView: UIViewController{
         
         if(i == -1){
             FV.isHidden = false
+            c1.backgroundColor = .white
         }
         if(i == 0){
             FV.isHidden = true
             SV.isHidden = false
+            
+            c1.backgroundColor = UIColor(named: "grayLight")
+            c2.backgroundColor = .white
         }
         if(i == 1){
             SV.isHidden = true
             TV.isHidden = false
+            
+            c2.backgroundColor = UIColor(named: "grayLight")
+            c3.backgroundColor = .white
         }
         
         if(i == 2){
             TV.isHidden = true
             FV.isHidden = false
             i = -1
+            
+            c3.backgroundColor = UIColor(named: "grayLight")
+            c1.backgroundColor = .white
         }
         
         i += 1
     }
 }
 
+
+private func circle() -> UIView {
+    let view = UIView()
+    view.layer.cornerRadius = 4
+    view.backgroundColor = UIColor(named: "grayLight")
+    view.frame = CGRect(x: 200, y: 700, width: 8, height: 8)
+    
+    return view
+}
 
 private func views(i1: String, i2: String, i3: String) -> UIView{
     let view = UIView()
