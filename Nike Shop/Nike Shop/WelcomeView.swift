@@ -61,6 +61,17 @@ class WelcomeView: UIViewController{
         }
         
         btn2.addTarget(self, action: #selector(toAut), for: .touchUpInside)
+        updateBackButtonTitle(title: "")
+
+    }
+    
+    private func updateBackButtonTitle(title: String) {
+        let backButton = UIBarButtonItem()
+        backButton.title = title
+        
+        navigationItem.backBarButtonItem = backButton
+        navigationItem.titleView?.tintColor = .black
+        
     }
     
     var img1: UIImageView = {

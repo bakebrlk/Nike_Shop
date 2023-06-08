@@ -21,7 +21,8 @@ class RegistrationView: UIViewController{
     
     private func setUI(){
         view.backgroundColor = .white
-        
+        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationItem.title = "New User"
         
         name = TF(text: "Username")
         
