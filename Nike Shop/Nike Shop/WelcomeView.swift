@@ -50,6 +50,7 @@ class WelcomeView: UIViewController{
             make.trailing.equalToSuperview().offset(-16)
             make.height.equalTo(54)
         }
+        btn1.addTarget(self, action: #selector(toReg), for: .touchUpInside)
         
         view.addSubview(btn2)
         
@@ -58,6 +59,8 @@ class WelcomeView: UIViewController{
             make.trailing.equalToSuperview().offset(-16)
             make.top.equalTo(btn1.snp.bottom).offset(24)
         }
+        
+        btn2.addTarget(self, action: #selector(toAut), for: .touchUpInside)
     }
     
     var img1: UIImageView = {
@@ -98,4 +101,12 @@ class WelcomeView: UIViewController{
         btn.setTitleColor(UIColor(named: "black"), for: .normal)
         return btn
     }()
+    
+    @objc private func toReg(){
+        navigationController?.pushViewController(RegistrationView(), animated: true)
+    }
+    
+    @objc private func toAut(){
+        navigationController?.pushViewController(AuthorizationView(), animated: true)
+    }
 }

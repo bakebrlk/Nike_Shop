@@ -17,7 +17,7 @@ func btn(text: String) -> UIButton{
 }
 
 func setBtn(btn: UIButton, view: UIView){
-    btn.layer.cornerRadius = 32
+    btn.layer.cornerRadius = 28
     btn.snp.makeConstraints { make in
         make.height.equalTo(54)
         make.bottom.equalTo(view.snp.bottom).offset(-58)
