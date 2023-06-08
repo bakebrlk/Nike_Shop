@@ -145,8 +145,10 @@ class OnBordingView: UIViewController{
             FV.isHidden = false
             i = -1
             
-            c3.backgroundColor = UIColor(named: "grayLight")
-            c1.backgroundColor = .white
+//            c3.backgroundColor = UIColor(named: "grayLight")
+//            c1.backgroundColor = .white
+            
+            navigationController?.pushViewController(WelcomeView(), animated: true)
         }
         
         i += 1
