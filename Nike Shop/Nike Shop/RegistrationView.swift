@@ -21,6 +21,8 @@ class RegistrationView: UIViewController{
     
     private func setUI(){
         view.backgroundColor = .white
+        
+        
         name = TF(text: "Username")
         
         setTF(view: view, tf: name)
@@ -45,6 +47,9 @@ class RegistrationView: UIViewController{
         rePassword.snp.makeConstraints { make in
             make.top.equalTo(password.snp.bottom).offset(16)
         }
+        
+        view.addSubview(btn)
+        setBtn(btn: btn, view: view)
     }
     
     private func TF(text : String) -> TextFieldWithPadding {
@@ -64,4 +69,9 @@ class RegistrationView: UIViewController{
             make.height.equalTo(48)
         }
     }
+    
+    private let btn: UIButton = {
+        let btn = btn(text: "Sign Up")
+        return btn
+    }()
 }
