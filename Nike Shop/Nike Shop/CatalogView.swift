@@ -62,7 +62,6 @@ extension CatalogView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostCell else {
                 return UITableViewCell()
             }
@@ -84,3 +83,4 @@ extension CatalogView: UITableViewDelegate, UITableViewDataSource {
         return 282
     }
 }
+
