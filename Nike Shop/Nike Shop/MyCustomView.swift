@@ -46,7 +46,7 @@ class TextFieldWithPadding: UITextField {
 }
 
 
-var counter : UIView =  {
+func counter() -> UIView {
     let counter = UIView()
     counter.backgroundColor = UIColor(named: "black")
     counter.layer.cornerRadius = 16
@@ -90,7 +90,7 @@ var counter : UIView =  {
         make.trailing.equalToSuperview().offset(-44)
     }
     return counter
-}()
+}
 
 struct Post: Decodable, Encodable{
     let imgName: String
@@ -100,6 +100,26 @@ struct Post: Decodable, Encodable{
 }
 
 class PostCell : UITableViewCell {
+    private var view1 = UIView()
+    private var view2 = UIView()
+    
+    private var img1 = UIImageView()
+    private var img2 = UIImageView()
+    
+    private var name1 = UILabel()
+    private var name2 = UILabel()
+    
+    private var description1 = UILabel()
+    private var description2 = UILabel()
+    
+    private var price1 = UILabel()
+    private var price2 = UILabel()
+    
+    private var btn1 = UIButton()
+    private var btn2 = UIButton()
+    
+    private var checkClick1 = false
+    private var checkClick2 = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -109,21 +129,83 @@ class PostCell : UITableViewCell {
             fatalError("init(coder:) has not been implemented")
     }
     
-    func configurView(post: Post){
-        img.image = UIImage(named: post.imgName)
-        title.text = post.title
-        descriptionForPost.text = post.description
-        price.text = "$\(post.price)"
+    func configurView(post1: Post, post2: Post){
+        setUI()
+        
+        
+        img1.image = UIImage(named: post1.imgName)
+        name1.text = post1.title
+        description1.text = post1.description
+        price1.text = "$\(post1.price)"
+        
+        img2.image = UIImage(named: post2.imgName)
+        name2.text = post2.title
+        description2.text = post2.description
+        price2.text = "$\(post2.price)"
+        
+       
     }
     
     private func setUI(){
-        self.addSubview(view)
         
+        selectionStyle = .none
+               
+               // Disable user interaction on contentView
+               contentView.isUserInteractionEnabled = false
+               
+        
+        view1 = view()
+        view2 = view()
+        
+        img1 = img()
+        img2 = img()
+        
+        name1 = title()
+        name2 = title()
+        
+        description1 = descriptionForPost()
+        description2 = descriptionForPost()
+        
+        price1 = price()
+        price2 = price()
+        
+        btn1 = bttn()
+        btn2 = bttn()
+        
+        
+        self.addSubview(view1)
+  
+        setView(view: view1, img: img1, title: name1, descriptionForPost: description1, price: price1, btn: btn1)
+        
+        view1.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+        }
+        
+        self.addSubview(view2)
+        
+        
+        setView(view: view2, img: img2, title: name2, descriptionForPost: description2, price: price2, btn: btn2)
+        
+        view2.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-16)
+        }
+        
+        btn1.addTarget(self, action: #selector(click), for: .touchUpInside)
+        btn2.addTarget(self, action: #selector(click2), for: .touchUpInside)
+    }
+    
+    private func setView(view: UIView, img: UIImageView, title: UILabel, descriptionForPost: UILabel, price: UILabel, btn : UIButton){
+        view.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.width.equalTo(174)
+            make.height.equalTo(282)
+        }
         view.addSubview(img)
         
         img.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.leading.equalToSuperview().offset(4)
+            make.trailing.equalToSuperview().offset(-4)
             make.top.equalToSuperview()
             make.bottom.equalTo(img.snp.top).offset(166)
         }
@@ -156,46 +238,72 @@ class PostCell : UITableViewCell {
         
         btn.snp.makeConstraints { make in
             make.top.equalTo(price.snp.bottom).offset(8)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.bottom.equalTo(btn.snp.top).offset(40)
         }
-        
     }
     
-    private let view: UIView = {
+    @objc private func click(){
+        
+        if(checkClick1){
+            btn1.setTitle("Add to cart", for: .normal)
+            btn1.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        }else{
+            btn1.setTitle("Remove", for: .normal)
+            btn1.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        }
+        
+        checkClick1 = !checkClick1
+    }
+    
+    @objc private func click2(){
+        
+        if(checkClick2){
+            btn2.setTitle("Add to cart", for: .normal)
+            btn2.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        }else{
+            btn2.setTitle("Remove", for: .normal)
+            btn2.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        }
+        
+        checkClick2 = !checkClick2
+    }
+    
+    private func view() -> UIView  {
         let view = UIView()
         view.backgroundColor = .white
         return view
-    }()
+    }
     
-    private let img: UIImageView = {
+    private func img() -> UIImageView  {
         let img = UIImageView(image: UIImage(named: "1"))
         return img
-    }()
+    }
     
-    private let title: UILabel = {
+    private func title() -> UILabel  {
         let title = UILabel()
         title.font = .boldSystemFont(ofSize: 13)
         return title
         
-    }()
+    }
     
-    private let descriptionForPost: UILabel = {
+    private func descriptionForPost() -> UILabel {
         let des = UILabel()
-        des.font = UIFont(name: "SFProText-Regular", size: 12)
+        des.textColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1)
+        des.font = .systemFont(ofSize: 12)
         return des
-    }()
+    }
     
-    private let price: UILabel = {
+    private func price() -> UILabel  {
         let price = UILabel()
         price.font = .boldSystemFont(ofSize: 12)
         return price
-    }()
+    }
     
-    private let btn: UIButton = {
+    private func bttn() -> UIButton  {
         let btn = btn(text: "Add to cart")
-        btn.layer.cornerRadius = 28        
+        btn.layer.cornerRadius = 20
         return btn
-    }()
+    }
 }

@@ -18,25 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: WelcomeView())
+        window?.rootViewController = UINavigationController(rootViewController: CartView())
         
         return true
-    }
-
-//    private func updateBackButtonTitle(title: String) {
-//           // Get the default appearance for UIBarButtonItem
-//           let backButtonAppearance = UIBarButtonItem.appearance()
-//
-//           // Set the custom back button title position adjustment
-//
-//           // Set the custom back button title text attributes
-//           backButtonAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
-//
-//           // Set the custom back button title
-//           backButtonAppearance.title = title
-//       }
-    
-    
+    }   
        
 }
 
