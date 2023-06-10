@@ -127,6 +127,7 @@ class PostCell : UITableViewCell {
     private var pr1 = 0
     private var pr2 = 0
     
+    weak var delegate: PostCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -262,6 +263,9 @@ class PostCell : UITableViewCell {
             CartView.Cart.append(Post(imgName: img1Name, title: name1.text ?? "", description: description1.text ?? "", price: pr1))
             
         }else{
+            
+            delegate?.deleteButtonTapped(cell: view1 as! CartCell)
+            
             btn1.setTitle("Remove", for: .normal)
             btn1.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
         }
@@ -329,6 +333,7 @@ protocol PostCellDelegate: AnyObject {
 
 class CartCell: UITableViewCell {
     
+    private var prices = 0
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -346,12 +351,17 @@ class CartCell: UITableViewCell {
         descriptionForPost.text = post.description
         price.text = "$\(post.price)"
         countLabel.text = "\(count)"
+        prices = post.price
         setUI()
     }
     
     var count = 1
     
     private func setUI(){
+        
+        CartView.totalCount += 1
+        CartView.totalPrice += prices
+        
         self.addSubview(view)
         selectionStyle = .none
         contentView.isUserInteractionEnabled = false
@@ -487,6 +497,10 @@ class CartCell: UITableViewCell {
 
     @objc private func plsCount(){
         count += 1
+        
+        CartView.totalCount += 1
+        CartView.totalPrice += prices
+        
         countLabel.text = "\(count)"
     }
     
@@ -500,6 +514,8 @@ class CartCell: UITableViewCell {
     
     @objc private func mnsCount(){
         count -= 1
+        CartView.totalCount -= 1
+        CartView.totalPrice -= prices
         
         if(count <= 0){
             delegate?.deleteButtonTapped(cell: self)

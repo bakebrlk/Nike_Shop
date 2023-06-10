@@ -12,6 +12,9 @@ class CartView: UIViewController{
     
     static var Cart: [Post] = []
     
+    static var totalCount = 0
+    static var totalPrice = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -97,6 +100,11 @@ class CartView: UIViewController{
         let main = UILabel()
         main.text = "Find interesting models in the Catalog."
         return main
+    }()
+    
+    private let totalAmount: UIView = {
+        let view = UIView()
+        return view
     }()
 }
 
