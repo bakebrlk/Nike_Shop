@@ -21,6 +21,7 @@
 		8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A502A30C7B700890968 /* ProfileView.swift */; };
 		8B3F7A542A30CB8F00890968 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B3F7A532A30CB8F00890968 /* SnapKit */; };
 		8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A552A30CC2400890968 /* MyCustomView.swift */; };
+		8B54F52B2A3606DD00256421 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B54F52A2A3606DD00256421 /* GoogleService-Info.plist */; };
 		8BBAC5212A3595D9005678EC /* AccInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5202A3595D9005678EC /* AccInf.swift */; };
 		8BBAC5232A359DAA005678EC /* ShowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5222A359DAA005678EC /* ShowSize.swift */; };
 		8BBAC5252A359FDA005678EC /* OrderHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5242A359FDA005678EC /* OrderHistory.swift */; };
@@ -43,6 +44,7 @@
 		8B3F7A4D2A30C77F00890968 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8B3F7A502A30C7B700890968 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8B3F7A552A30CC2400890968 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
+		8B54F52A2A3606DD00256421 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BBAC5202A3595D9005678EC /* AccInf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInf.swift; sourceTree = "<group>"; };
 		8BBAC5222A359DAA005678EC /* ShowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSize.swift; sourceTree = "<group>"; };
 		8BBAC5242A359FDA005678EC /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 				2492CF33FA095D39D4C4A5AD /* Pods-Nike Shop.debug.xcconfig */,
 				4F123193D6BA6FF3D5683B53 /* Pods-Nike Shop.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,6 +102,7 @@
 		8B3F7A2E2A30C59F00890968 /* Nike Shop */ = {
 			isa = PBXGroup;
 			children = (
+				8B54F52A2A3606DD00256421 /* GoogleService-Info.plist */,
 				8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */,
 				8B3F7A332A30C59F00890968 /* ViewController.swift */,
 				8B3F7A432A30C68400890968 /* OnBordingView.swift */,
@@ -188,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3F7A3C2A30C5A000890968 /* LaunchScreen.storyboard in Resources */,
+				8B54F52B2A3606DD00256421 /* GoogleService-Info.plist in Resources */,
 				8B3F7A392A30C5A000890968 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

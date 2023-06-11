@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
 
 class RegistrationView: UIViewController{
     
@@ -17,6 +18,11 @@ class RegistrationView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        name.becomeFirstResponder()
     }
     
     private func setUI(){
@@ -51,6 +57,8 @@ class RegistrationView: UIViewController{
         
         view.addSubview(btn)
         setBtn(btn: btn, view: view)
+        
+        btn.addTarget(self, action: #selector(reg), for: .touchUpInside)
     }
     
     private func TF(text : String) -> TextFieldWithPadding {
@@ -75,4 +83,26 @@ class RegistrationView: UIViewController{
         let btn = btn(text: "Sign Up")
         return btn
     }()
+    
+    @objc private func reg(){
+        print("Reg")
+        
+        guard let email = name.text, !email.isEmpty,
+              let pass = password.text, !pass.isEmpty,
+              let repass = rePassword.text, !repass.isEmpty,
+              pass == repass else{
+                    print("Missing reg")
+                    return
+                }
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pass) {[weak self] result, error in
+            
+            guard error == nil else {
+                print("Account creation failed")
+                return
+            }
+            
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
 }

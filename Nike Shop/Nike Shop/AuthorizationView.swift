@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
 
 class AuthorizationView: UIViewController{
     var name = TextFieldWithPadding()
@@ -41,6 +42,8 @@ class AuthorizationView: UIViewController{
         
         view.addSubview(btn)
         setBtn(btn: btn, view: view)
+        
+        btn.addTarget(self, action: #selector(auth), for: .touchUpInside)
     }
     
     private func TF(text : String) -> TextFieldWithPadding {
@@ -65,4 +68,40 @@ class AuthorizationView: UIViewController{
         let btn = btn(text: "Sign Up")
         return btn
     }()
+    
+    @objc private func auth(){
+        
+        guard let email = name.text, !email.isEmpty,
+              let pass = password.text, !pass.isEmpty else{
+                print("Missing")
+                return
+        }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pass, completion: {result, error in
+            guard error == nil else{
+                self.createAcc()
+                // Create account
+                return
+            }
+            
+            self.navigationController?.pushViewController(ViewController(), animated: true)
+        })
+    }
+    
+    private func createAcc(){
+        let alert = UIAlertController(title: "Aww sorry you haven't account ", message: "Would you like create account ?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+            
+            self.navigationController?.pushViewController(RegistrationView(), animated: true)
+        }))
+        
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            
+        }))
+        
+        
+        present(alert, animated: true)
+    }
+    
 }
