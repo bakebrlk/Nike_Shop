@@ -20,6 +20,9 @@
 		8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A502A30C7B700890968 /* ProfileView.swift */; };
 		8B3F7A542A30CB8F00890968 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B3F7A532A30CB8F00890968 /* SnapKit */; };
 		8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A552A30CC2400890968 /* MyCustomView.swift */; };
+		8BBAC5212A3595D9005678EC /* AccInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5202A3595D9005678EC /* AccInf.swift */; };
+		8BBAC5232A359DAA005678EC /* ShowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5222A359DAA005678EC /* ShowSize.swift */; };
+		8BBAC5252A359FDA005678EC /* OrderHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAC5242A359FDA005678EC /* OrderHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		8B3F7A4D2A30C77F00890968 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8B3F7A502A30C7B700890968 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8B3F7A552A30CC2400890968 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
+		8BBAC5202A3595D9005678EC /* AccInf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInf.swift; sourceTree = "<group>"; };
+		8BBAC5222A359DAA005678EC /* ShowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSize.swift; sourceTree = "<group>"; };
+		8BBAC5242A359FDA005678EC /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 				8B3F7A4B2A30C76800890968 /* CatalogView.swift */,
 				8B3F7A4D2A30C77F00890968 /* CartView.swift */,
 				8B3F7A502A30C7B700890968 /* ProfileView.swift */,
+				8BBAC5202A3595D9005678EC /* AccInf.swift */,
+				8BBAC5222A359DAA005678EC /* ShowSize.swift */,
+				8BBAC5242A359FDA005678EC /* OrderHistory.swift */,
 				8B3F7A552A30CC2400890968 /* MyCustomView.swift */,
 				8B3F7A382A30C5A000890968 /* Assets.xcassets */,
 				8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */,
@@ -164,13 +173,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3F7A442A30C68400890968 /* OnBordingView.swift in Sources */,
+				8BBAC5252A359FDA005678EC /* OrderHistory.swift in Sources */,
 				8B3F7A512A30C7B700890968 /* ProfileView.swift in Sources */,
 				8B3F7A4C2A30C76800890968 /* CatalogView.swift in Sources */,
 				8B3F7A342A30C59F00890968 /* ViewController.swift in Sources */,
 				8B3F7A4A2A30C73E00890968 /* AuthorizationView.swift in Sources */,
+				8BBAC5212A3595D9005678EC /* AccInf.swift in Sources */,
 				8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */,
 				8B3F7A462A30C6AA00890968 /* WelcomeView.swift in Sources */,
 				8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */,
+				8BBAC5232A359DAA005678EC /* ShowSize.swift in Sources */,
 				8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */,
 				8B3F7A482A30C71300890968 /* RegistrationView.swift in Sources */,
 			);
