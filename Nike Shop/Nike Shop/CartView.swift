@@ -8,7 +8,14 @@
 import UIKit
 import SnapKit
 
-class CartView: UIViewController{
+class CartView: UIViewController, cartDelegate{
+    func reload() {
+        tableView.reloadData()
+        CartIsEmpty()
+       
+        print(tableView)
+    }
+    
     
     static var Cart: [Post] = []
     
@@ -17,12 +24,12 @@ class CartView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
     }
     
     private func setUI(){
-        CartView.Cart.append(Post(imgName: "1", title: "Dolce & Gabbana", description: "Кеды с принтом граффити", price: 1251))
-        
+   
         CartIsEmpty()
         
         navigationItem.title = "Cart"
@@ -58,6 +65,14 @@ class CartView: UIViewController{
         }
         
     }
+    
+//    func reload(){
+//
+//        tableView.reloadData()
+//        CartIsEmpty()
+//
+//        print(tableView)
+//    }
     
     func CartIsEmpty(){
         if CartView.Cart.isEmpty {

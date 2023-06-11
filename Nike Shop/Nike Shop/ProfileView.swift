@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
 
 class ProfileView: UIViewController, sizeDelegate{
     
@@ -37,7 +38,7 @@ class ProfileView: UIViewController, sizeDelegate{
         }
         
         vi.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
-//        navigationItem.title = "Cart"
+        navigationItem.title = "Cart"
         navigationController?.navigationBar.isHidden = true
         
         let btnInfProf = btn(text: "", img: "chevron.right")
@@ -72,6 +73,8 @@ class ProfileView: UIViewController, sizeDelegate{
         let btnS = Nike_Shop.btn(text: "Sign out")
         view.addSubview(btnS)
         setBtn(btn: btnS, view: view)
+        
+        btnS.addTarget(self, action: #selector(out), for: .touchUpInside)
 //        btnS.layer.cornerRadius = 27
 //        btnS.snp.makeConstraints { make in
 //            make.bottom.equalToSuperview().offset(-120)
@@ -167,6 +170,20 @@ class ProfileView: UIViewController, sizeDelegate{
     @objc private func web2(){
         if let url = URL(string: "https://hypestew.com/blogs/news/legit-check") {
             UIApplication.shared.open(url)
+        }
+        
+    }
+    
+    @objc private func out(){
+        do{
+            try FirebaseAuth.Auth.auth().signOut()
+            
+            navigationController?.pushViewController(WelcomeView(), animated: true)
+       
+            
+        }catch let signOutError as NSError {
+            // An error occurred while signing out
+            print("Error signing out: \(signOutError.localizedDescription)")
         }
         
     }

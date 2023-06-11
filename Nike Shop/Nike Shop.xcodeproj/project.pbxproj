@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D9C150C8BD8D61F5082AFDC /* Pods_Nike_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EB0513F43F204B4BBC67AA /* Pods_Nike_Shop.framework */; };
+		8B1C19842A36186A0036CFEB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C19832A36186A0036CFEB /* Protocols.swift */; };
 		8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */; };
 		8B3F7A342A30C59F00890968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A332A30C59F00890968 /* ViewController.swift */; };
 		8B3F7A392A30C5A000890968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F7A382A30C5A000890968 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		2492CF33FA095D39D4C4A5AD /* Pods-Nike Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike Shop.debug.xcconfig"; path = "Target Support Files/Pods-Nike Shop/Pods-Nike Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		4F123193D6BA6FF3D5683B53 /* Pods-Nike Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike Shop.release.xcconfig"; path = "Target Support Files/Pods-Nike Shop/Pods-Nike Shop.release.xcconfig"; sourceTree = "<group>"; };
+		8B1C19832A36186A0036CFEB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8B3F7A2C2A30C59F00890968 /* Nike Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B3F7A332A30C59F00890968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				8BBAC5202A3595D9005678EC /* AccInf.swift */,
 				8BBAC5222A359DAA005678EC /* ShowSize.swift */,
 				8BBAC5242A359FDA005678EC /* OrderHistory.swift */,
+				8B1C19832A36186A0036CFEB /* Protocols.swift */,
 				8B3F7A552A30CC2400890968 /* MyCustomView.swift */,
 				8B3F7A382A30C5A000890968 /* Assets.xcassets */,
 				8B3F7A3A2A30C5A000890968 /* LaunchScreen.storyboard */,
@@ -253,6 +256,7 @@
 				8BBAC5212A3595D9005678EC /* AccInf.swift in Sources */,
 				8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */,
 				8B3F7A462A30C6AA00890968 /* WelcomeView.swift in Sources */,
+				8B1C19842A36186A0036CFEB /* Protocols.swift in Sources */,
 				8B3F7A562A30CC2400890968 /* MyCustomView.swift in Sources */,
 				8BBAC5232A359DAA005678EC /* ShowSize.swift in Sources */,
 				8B3F7A4E2A30C77F00890968 /* CartView.swift in Sources */,

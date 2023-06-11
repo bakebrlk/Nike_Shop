@@ -208,17 +208,20 @@ class PostCell : UITableViewCell {
         }
     }
     
+    private weak var del: cartDelegate?
+    
     @objc private func click(){
         
         if(checkClick1){
             btn1.setTitle("Add to cart", for: .normal)
             btn1.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
             
-            CartView.Cart.append(Post(imgName: img1Name, title: name1.text ?? "", description: description1.text ?? "", price: pr1))
-            
+//            delegate?.deleteButtonTapped(cell: view1 as! CartCell)
+
         }else{
-            
-            delegate?.deleteButtonTapped(cell: view1 as! CartCell)
+            CartView.Cart.append(Post(imgName: img1Name, title: name1.text ?? "", description: description1.text ?? "", price: pr1))
+            del?.reload()
+            print(name1.text)
             
             btn1.setTitle("Remove", for: .normal)
             btn1.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
@@ -233,9 +236,12 @@ class PostCell : UITableViewCell {
             btn2.setTitle("Add to cart", for: .normal)
             btn2.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
             
-            CartView.Cart.append(Post(imgName: img2Name, title: name2.text ?? "", description: description2.text ?? "", price: pr2))
-        }else{
+//            delegate?.deleteButtonTapped(cell: view2 as! CartCell)
+
             
+        }else{
+            CartView.Cart.append(Post(imgName: img2Name, title: name2.text ?? "", description: description2.text ?? "", price: pr2))
+            del?.reload()
             btn2.setTitle("Remove", for: .normal)
             btn2.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
         }

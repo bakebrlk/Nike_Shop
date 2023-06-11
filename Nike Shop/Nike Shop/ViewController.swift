@@ -12,8 +12,7 @@ class ViewController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationController?.navigationBar.prefersLargeTitles = false
-//        navigationController?.navigationBar.frame.size.height = 20
+
         tabBar.tintColor = .black
         tabBar.backgroundColor = .white
         tabBar.isTranslucent = false
@@ -39,7 +38,8 @@ class ViewController: UITabBarController{
         navigationController.tabBarItem.image = tabImage
         navigationController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationController?.title = tabTitle
-        rootViewController.navigationController?.navigationBar.backgroundColor = .blue
         return navigationController
     }
 }
+
+
