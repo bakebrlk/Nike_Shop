@@ -22,6 +22,7 @@ class OnBordingView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Storage.checkOnbording = true
         setUI()
     }
     

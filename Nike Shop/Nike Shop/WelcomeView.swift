@@ -12,7 +12,10 @@ class WelcomeView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Storage.checkWelcome = true
         setUI()
+        
     }
     
     private func setUI(){

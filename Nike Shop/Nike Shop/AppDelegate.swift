@@ -17,9 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
     
+        var view = UIViewController()
+        
+        if(!Storage.checkOnbording){
+            view = OnBordingView()
+            
+        }else if(!Storage.checkWelcome){
+            view = WelcomeView()
+            
+        }else{
+            view = AuthorizationView()
+        }
+        
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = UINavigationController(rootViewController: view)
         
         return true
     }   
