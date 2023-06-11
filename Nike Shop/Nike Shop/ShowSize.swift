@@ -8,9 +8,11 @@
 import UIKit
 import SnapKit
 
-class ShowSize: UIViewController {
+class ShowSize: UIViewController, UITextFieldDelegate{
     
-
+    var tf = TextFieldWithPadding()
+    weak var delegate: sizeDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -20,8 +22,10 @@ class ShowSize: UIViewController {
         view.backgroundColor = .white
         
         navigationItem.title = "Shoe Size"
-        let tf = sizeTF
+        tf = sizeTF
         tf.placeholder = "Shoe Size"
+        tf.keyboardType = .numberPad
+        tf.delegate = self
         
         view.addSubview(tf)
         
@@ -33,6 +37,7 @@ class ShowSize: UIViewController {
         }
         
         let btn = btn(text: "Save changes")
+        btn.addTarget(self, action: #selector(newSize), for: .touchUpInside)
         view.addSubview(btn)
         
         setBtn(btn: btn, view: view)
@@ -41,7 +46,18 @@ class ShowSize: UIViewController {
     private var sizeTF: TextFieldWithPadding = {
         let tf = TextFieldWithPadding()
         tf.layer.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1).cgColor
-        tf.keyboardType = .numberPad
         return tf
     }()
+    
+    @objc private func newSize(){
+        let ss: String = tf.text ?? "0"
+        ProfileView.size = Double(ss) ?? 0
+        delegate?.sizeCheck()
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+
+protocol sizeDelegate: AnyObject {
+    func sizeCheck()
 }

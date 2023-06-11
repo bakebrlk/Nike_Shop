@@ -46,52 +46,6 @@ class TextFieldWithPadding: UITextField {
 }
 
 
-func counter() -> UIView {
-    let counter = UIView()
-    counter.backgroundColor = UIColor(named: "black")
-    counter.layer.cornerRadius = 16
-    
-    counter.snp.makeConstraints { make in
-        make.leading.equalToSuperview().offset(16)
-        make.trailing.equalToSuperview().offset(-52)
-        make.bottom.equalToSuperview().offset(-21)
-        make.top.equalToSuperview().offset(10)
-    }
-    
-    let plus = UIButton()
-    plus.setTitle("+", for: .normal)
-    plus.tintColor = UIColor(named: "white")
-    
-    counter.addSubview(plus)
-    
-    let minus = UIButton()
-    minus.setTitle("-", for: .normal)
-    minus.tintColor = UIColor(named: "white")
-    
-    counter.addSubview(minus)
-    
-    var cccc = 1
-    
-    let countLabel = UILabel()
-    countLabel.text = "\(cccc)"
-    countLabel.textColor = UIColor(named: "white")
-    
-    counter.addSubview(countLabel)
-    
-    countLabel.snp.makeConstraints { make in
-        make.center.equalToSuperview()
-    }
-    
-    minus.snp.makeConstraints { make in
-        make.leading.equalToSuperview().offset(44)
-    }
-    
-    plus.snp.makeConstraints { make in
-        make.trailing.equalToSuperview().offset(-44)
-    }
-    return counter
-}
-
 struct Post: Decodable, Encodable{
     let imgName: String
     let title: String
@@ -537,4 +491,10 @@ class CartCell: UITableViewCell {
         label.textColor = .white
         return label
     }()
+}
+
+
+struct Order: Decodable, Encodable {
+    let count: Int
+    let totalPrice: Int
 }

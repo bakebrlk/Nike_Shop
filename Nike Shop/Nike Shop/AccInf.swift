@@ -59,8 +59,7 @@ class AccInf: UIViewController{
         setBtn(btn: btn, view: view)
         
     }
-    
-    
+   
     private func textField(hiringText: String) -> TextFieldWithPadding {
         let tf = TextFieldWithPadding()
         tf.placeholder = hiringText

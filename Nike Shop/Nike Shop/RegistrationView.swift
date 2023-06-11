@@ -35,7 +35,7 @@ class RegistrationView: UIViewController{
         
         password = TF(text: "Password")
         setTF(view: view, tf: password)
-        
+        password.isSecureTextEntry = true
         password.snp.makeConstraints { make in
             make.top.equalTo(name.snp.bottom).offset(16)
             make.bottom.equalTo(password.snp.top).offset(48)
@@ -44,7 +44,7 @@ class RegistrationView: UIViewController{
         
         rePassword = TF(text: "Repeat password")
         setTF(view: view, tf: rePassword)
-        
+        rePassword.isSecureTextEntry = true
         rePassword.snp.makeConstraints { make in
             make.top.equalTo(password.snp.bottom).offset(16)
         }

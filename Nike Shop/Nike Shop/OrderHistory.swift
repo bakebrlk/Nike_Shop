@@ -11,7 +11,7 @@ import Foundation
 
 class OrderHistory: UIViewController {
     
-    static var ListHistory = [Post].self
+    static var ListHistory: [Order] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,42 @@ class OrderHistory: UIViewController {
     
     private func setUI(){
         navigationItem.title = "Order History"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CartCell.self, forCellReuseIdentifier: "HistoryCell")
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
+    }
+    
+    private var tableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+}
+
+
+extension OrderHistory: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return OrderHistory.ListHistory.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as? HistoryCell else { return UITableViewCell() }
+        cell.configureView(count: OrderHistory.ListHistory[indexPath.row].count, totalPrice: OrderHistory.ListHistory[indexPath.row].totalPrice)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

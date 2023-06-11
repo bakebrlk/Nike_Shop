@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D9C150C8BD8D61F5082AFDC /* Pods_Nike_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EB0513F43F204B4BBC67AA /* Pods_Nike_Shop.framework */; };
 		8B3F7A302A30C59F00890968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */; };
 		8B3F7A342A30C59F00890968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F7A332A30C59F00890968 /* ViewController.swift */; };
 		8B3F7A392A30C5A000890968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F7A382A30C5A000890968 /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2492CF33FA095D39D4C4A5AD /* Pods-Nike Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike Shop.debug.xcconfig"; path = "Target Support Files/Pods-Nike Shop/Pods-Nike Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		4F123193D6BA6FF3D5683B53 /* Pods-Nike Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike Shop.release.xcconfig"; path = "Target Support Files/Pods-Nike Shop/Pods-Nike Shop.release.xcconfig"; sourceTree = "<group>"; };
 		8B3F7A2C2A30C59F00890968 /* Nike Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3F7A2F2A30C59F00890968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B3F7A332A30C59F00890968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		8BBAC5202A3595D9005678EC /* AccInf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccInf.swift; sourceTree = "<group>"; };
 		8BBAC5222A359DAA005678EC /* ShowSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSize.swift; sourceTree = "<group>"; };
 		8BBAC5242A359FDA005678EC /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
+		F2EB0513F43F204B4BBC67AA /* Pods_Nike_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +55,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3F7A542A30CB8F00890968 /* SnapKit in Frameworks */,
+				5D9C150C8BD8D61F5082AFDC /* Pods_Nike_Shop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B536EF28D2481589324A367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2EB0513F43F204B4BBC67AA /* Pods_Nike_Shop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B6FA161DBFAECA7F01B9ED4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2492CF33FA095D39D4C4A5AD /* Pods-Nike Shop.debug.xcconfig */,
+				4F123193D6BA6FF3D5683B53 /* Pods-Nike Shop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8B3F7A232A30C59F00890968 = {
 			isa = PBXGroup;
 			children = (
 				8B3F7A2E2A30C59F00890968 /* Nike Shop */,
 				8B3F7A2D2A30C59F00890968 /* Products */,
+				4B6FA161DBFAECA7F01B9ED4 /* Pods */,
+				4B536EF28D2481589324A367 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B3F7A402A30C5A000890968 /* Build configuration list for PBXNativeTarget "Nike Shop" */;
 			buildPhases = (
+				F22B8243B54A4B01F1D6EB95 /* [CP] Check Pods Manifest.lock */,
 				8B3F7A282A30C59F00890968 /* Sources */,
 				8B3F7A292A30C59F00890968 /* Frameworks */,
 				8B3F7A2A2A30C59F00890968 /* Resources */,
+				C2A3888472BA3CC9E31AC0D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +193,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2A3888472BA3CC9E31AC0D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike Shop/Pods-Nike Shop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike Shop/Pods-Nike Shop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike Shop/Pods-Nike Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22B8243B54A4B01F1D6EB95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nike Shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B3F7A282A30C59F00890968 /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		8B3F7A412A30C5A000890968 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2492CF33FA095D39D4C4A5AD /* Pods-Nike Shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +416,7 @@
 		};
 		8B3F7A422A30C5A000890968 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F123193D6BA6FF3D5683B53 /* Pods-Nike Shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

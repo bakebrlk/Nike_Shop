@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: OrderHistory())
+        window?.rootViewController = UINavigationController(rootViewController: ViewController())
         
         return true
     }   
